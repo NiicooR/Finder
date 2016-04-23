@@ -1,6 +1,6 @@
 package entidades;
 
-import Controladores.Resultado;
+import controladores.web.Resultado;
 import java.util.ArrayList;
 
 public class ListaResultados {

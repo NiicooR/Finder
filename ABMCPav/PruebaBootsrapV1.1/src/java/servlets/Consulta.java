@@ -5,7 +5,7 @@
  */
 package servlets;
 
-import Controladores.Resultado;
+import controladores.web.Resultado;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -45,9 +45,8 @@ public class Consulta extends HttpServlet {
 //            Resultado r = new Resultado();
 //            r.obtenerDatos("G:\\DocPrueba\\1.txt");           
 //            ListaResultados.getInstance().getLista().add(r);
-//            //ListaResultados.getLista().add(r);
-//            
-//            
+//            //ListaResultados.getLista().add(r);//         
+            
 //            Resultado r1 = new Resultado();
 //            r1.obtenerDatos("G:\\DocPrueba\\2.txt");
 //            ListaResultados.getInstance().getLista().add(r1);
