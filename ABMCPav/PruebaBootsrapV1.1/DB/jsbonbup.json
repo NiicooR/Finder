@@ -1,0 +1,109 @@
+{
+    "type": "database",
+    "name": "BuscadorVectorial",
+    "objects": [
+        {
+            "type": "table",
+            "database": null,
+            "name": "POSTEO",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE POSTEO (id INTEGER PRIMARY KEY, idPalabra INTEGER REFERENCES VOCABULARIO (id), idDocumento INTEGER REFERENCES DOCUMENTO (id), repeticion INTEGER)",
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "idPalabra",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "FOREIGN KEY",
+                            "definition": "REFERENCES VOCABULARIO (id)"
+                        }
+                    ]
+                },
+                {
+                    "name": "idDocumento",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "FOREIGN KEY",
+                            "definition": "REFERENCES DOCUMENTO (id)"
+                        }
+                    ]
+                },
+                {
+                    "name": "repeticion",
+                    "type": "INTEGER"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "VOCABULARIO",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE VOCABULARIO (id INTEGER PRIMARY KEY AUTOINCREMENT, palabra STRING, documentos INTEGER, maxRepeticion INTEGER)",
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "palabra",
+                    "type": "STRING"
+                },
+                {
+                    "name": "documentos",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "maxRepeticion",
+                    "type": "INTEGER"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "DOCUMENTO",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE DOCUMENTO (id INTEGER PRIMARY KEY AUTOINCREMENT, ruta STRING)",
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "ruta",
+                    "type": "STRING"
+                }
+            ],
+            "rows": [
+            ]
+        }
+    ]
+}
